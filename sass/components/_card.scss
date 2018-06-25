@@ -3,6 +3,7 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   height: 45rem;
+  text-align: center;
 
   &__side {
     position: absolute;
@@ -13,11 +14,23 @@
     top: 0;
     left: 0;
     width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
     backface-visibility: hidden;
-    box-shadow: 0rem 1.5rem 2rem rgba($color-black,.2);
+    box-shadow: 0rem 1.5rem 2rem rgba($color-black, 0.2);
 
     &--front {
       background-color: $color-white;
+
+      &--incognito{
+        background-image: linear-gradient(
+          to bottom right,
+          rgba($color-white, 1),
+          rgba($color-black, 0.7)
+        );
+        padding: 3rem;
+        font-size: 22rem;
+      }
     }
 
     &--back {
@@ -32,25 +45,82 @@
       }
       &--middle {
         background-image: linear-gradient(
-            to bottom right,
-            rgba($color-yellow-light, 0.7),
-            rgba($color-yellow-dark, 0.7)
-          );
+          to bottom right,
+          rgba($color-blue-light, 0.7),
+          rgba($color-blue-dark, 0.7)
+        );
       }
       &--right {
         background-image: linear-gradient(
-            to bottom right,
-            rgba($color-blue-light, 0.7),
-            rgba($color-blue-dark, 0.7)
-          );
+          to bottom right,
+          rgba($color-yellow-light, 0.7),
+          rgba($color-yellow-dark, 0.7)
+        );
       }
     }
   }
 
   &:hover &__side--front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   &:hover &__side--back {
-    transform: rotateY(0);
+    transform: rotateY(0deg);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &--1 {
+      background-image: linear-gradient(
+          to bottom right,
+          rgba($color-white, 1),
+          rgba($color-black, 0.3)
+        ),
+        url(../images/sen.jpg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to bottom right,
+          rgba($color-white, 1),
+          rgba($color-black, 0.3)
+        ),
+        url(../images/cinq1.png);
+    }
+    &--3 {
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 22rem;
+    right: 2rem;
+    text-align: right;
+    width: 50%;
+  }
+  &__heading-span {
+    padding: 1rem 1.1rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to bottom right,
+        rgba($color-white, 0.3),
+        rgba($color-black, 0.3)
+      );
+    }
+  }
+  &__details{
+      color: $color-grey-dark;
+      font-weight: 300;
+        font-size: 2rem;
+        padding: 2rem;
+        margin-top: 8rem;
   }
 }

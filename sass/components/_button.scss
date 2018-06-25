@@ -7,6 +7,10 @@
     display: inline-block;
     border-radius: 10rem;
     transition: all .5s;
+
+    @include respond(phone) {
+      font-size: 1rem;
+    }
   }
   /*&:hover {
    // animation-name: moveButtonUp;
