@@ -1,0 +1,38 @@
+@mixin clearfix {
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+//MEDIA QUERY MANAGER
+/*
+0 - 600px:          PHONE
+600px - 900px:      TABLET PORTRAIT
+900px - 1200px:     TABLET LANDSCAPE
+1200px - 1800px:    REGULAR DESKTOPS
+1800px + :          BIG DESKTOP
+
+$breakpoint argument choices
+- phone 
+-tab port
+-tab lands
+-tab-desktop
+
+- 1em = 16px (Default browser font-size)
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content};  //600px / 16 = 
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content};  //900px / 16 = 
+    }
+    @if $breakpoint == tab-lands {
+        @media (max-width: 75em) { @content};  //1200px / 16 = 
+    }
+    @if $breakpoint == tab-desktop {
+        @media (min-width: 112.5em) { @content}; //1800px / 16 = 
+    }
+}

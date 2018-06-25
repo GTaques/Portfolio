@@ -1,0 +1,81 @@
+
+.row{
+    
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    &:not(:last-child){
+        margin-bottom: $gutter-horizontal;
+
+        @include respond(tab-port){
+            margin-right: $gutter-vertical-small;
+        }
+    }
+
+
+    @include clearfix;
+
+    // The ˆ selects all elements that START w/ 'col-'
+    // The * selects all elements that CONTAINS 'col-'
+    // The $ selects all elements that ENDS w/ 'col-'
+
+    [class^="col-"] {
+
+        float: left;
+
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+            
+        }
+    }
+
+    .col-1-of-2{
+        width: calc((100% - #{$gutter-horizontal}) / 2);   
+        @include respond(phone){
+            padding: 2rem;
+           
+        }
+        @include respond(tab-port){
+            padding: 2rem;
+            
+        }
+
+    }
+
+    .col-1-of-3{
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+        @include respond(phone){
+            width: 100% !important;
+        }
+        @include respond(tab-port){ 
+            width: 100% !important;
+            height: 60rem;
+        }
+    }
+
+    .col-1-of-4{
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+
+        @include respond(phone){
+            width: 100%;
+        }
+
+        @include respond(tab-port){ 
+            width: 100%;
+            padding-bottom: 5rem;
+            padding-right: 10rem;
+            padding-left: 10rem;
+        } 
+    }
+    .col-2-of-4{
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+    .col-3-of-4{
+        width: calc((((100% - 3 * #{$gutter-horizontal}) / 4) * 3) + 2 * #{$gutter-horizontal});
+    }
+    .col-2-of-3 {
+        width: calc(((100% - 2 * #{$gutter-horizontal}) / 1.5)  + #{$gutter-horizontal});
+    }
+
+}

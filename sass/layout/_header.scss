@@ -1,0 +1,37 @@
+.header {
+    height: 95vh;
+    display: block;
+    background-image: linear-gradient(
+        to right,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)
+      ),
+      url(../images/nepal.JPG);
+    /*background-image:linear-gradient(rgba(245, 66, 66, 0.7),rgba(241, 24, 24, 0.8)), url(../images/hero.JPG); */
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 35% 100%, 0 80%);
+  
+    &__logo-box {
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+    }
+    &__logo {
+      height: 6rem;
+    }
+    &__text-box {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    &__line{
+      display: block;
+      height: 0.2rem;
+      background-color: $color-grey-dark;
+      widows: 100%;
+    }
+  }
