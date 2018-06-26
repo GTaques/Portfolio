@@ -29,6 +29,9 @@
         }
     }
 
+    .col-1-of-1{
+        width: 100%;
+    }
     .col-1-of-2{
         width: calc((100% - #{$gutter-horizontal}) / 2);   
         @include respond(phone){

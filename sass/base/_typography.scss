@@ -81,6 +81,21 @@ body {
   text-transform: uppercase;
   
 }
+.heading-last{
+  padding: 10rem;
+  line-height: 6rem;
+  font-size: 3rem;
+  font-weight: 400;
+
+  &--quote{
+    display: block;
+  }
+  &--author{
+    display: block;
+    text-align: right;
+  }
+  
+}
 .paragraph {
   font-size: 1.6rem;
   &:not(:last-child){
