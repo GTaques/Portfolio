@@ -36,3 +36,7 @@ $breakpoint argument choices
         @media (min-width: 112.5em) { @content}; //1800px / 16 = 
     }
 }
+
+@mixin translate5050{
+    transform: translate(-50%, -50%);
+}

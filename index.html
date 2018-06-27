@@ -14,8 +14,26 @@
 </head>
 
 <body>
-    <header class="header">
-        <h3 class="header__line"></h3>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item navigation__item--1"><a href="#section-header" class="navigation__link"><span>01</span> Home</a></li>
+                <li class="navigation__item navigation__item--2"><a href="#section-about" class="navigation__link"><span>02</span> About</a></li>
+                <li class="navigation__item navigation__item--3"><a href="#section-journeys" class="navigation__link"><span>03</span> Perks</a></li>
+                <li class="navigation__item navigation__item--4"><a href="#section-experience" class="navigation__link"><span>04</span> Experience</a></li>
+                <li class="navigation__item navigation__item--4"><a href="#section-quote" class="navigation__link"><span>05</span> Quotes</a></li>
+            </ul>
+        </nav>
+    </div>
+    <header id="section-header" class="header">
         <div class="header__logo-box">
             <img src="images/iha.png" alt="GabeT" class="header__logo">
         </div>
@@ -64,7 +82,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-features">
+        <section id="section-journeys" class="section-features">
             <div class="row">
                 <div class="col-1-of-4">
                     <div class="feature-box">
@@ -100,7 +118,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-experience">
+        <section id="section-experience" class="section-experience">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Work experience!
@@ -155,16 +173,16 @@
                 </div>
             </div>
         </section>
-        <section class="section-biography">
+        <section id="section-quote" class="section-biography">
             <div class="row">
                 <div class="col-1-of-1">
                     <div class="avatar-box">
                         <img class="avatar-box__avatar" src="images/scott.jpg" alt="me">
-                        <h5 class="heading-last">
-                            <span class="heading-last--quote">
+                        <h5 class="heading-quote">
+                            <span class="heading-quote--quote">
                                     "How good we can become at anything is really no reflection of how good we are when we start it!"
                             </span>
-                            <span class="heading-last--author">
+                            <span class="heading-quote--author">
                                 -- <i>Scott Kelly</i>
                             </span>
                         </h5>
